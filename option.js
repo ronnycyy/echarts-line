@@ -84,11 +84,19 @@ option = {
     // value: [数据点] 和 [坐标点] 不用一一对应，适用于连续数据。
     // categories: [数据点] 和 [坐标点] 一一对应，适用于离散数据。
     type: 'value',
-    // x轴最小值，今天 00:00 距离 1970-01-01 00:00:00 的毫秒数
+    // 坐标轴名称
+    name: 'mmol/L',
+    // 坐标轴名称位置
+    nameLocation: 'end',
+    // 坐标轴名称样式
+    nameTextStyle: {
+      fontWeight: bolder,
+    },
+    // y轴最小值
     min: 0,
-    // x轴最大值，今天 23:59 距离 1970-01-01 00:00:00 的毫秒数
+    // y轴最大值
     max: 15,
-    // x轴刻度间隔，4h的毫秒数
+    // y轴刻度间隔
     interval: 3,
     axisLine: {
       // 不显示 y 轴轴线
