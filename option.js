@@ -107,8 +107,8 @@ option = {
       }
     }
   },
+  // 分段颜色显示
   visualMap: {
-    // 分段型
     type: 'piecewise',
     top: 50,
     right: 10,
@@ -119,7 +119,22 @@ option = {
     ]
   },
   series: [{
+    type: 'line',
     data: data,
-    type: 'line'
+    markArea: {
+        itemStyle: {
+          color: 'rgba(33, 150, 243, 0.5)'
+        },
+        data: [
+          [
+            {
+              yAxis: 4.0
+            },
+            {
+              yAxis: 10.0
+            }
+          ]
+        ]
+      }
   }]
 };
