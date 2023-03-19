@@ -107,7 +107,18 @@ option = {
       }
     }
   },
- series: [{
+  visualMap: {
+    // 分段型
+    type: 'piecewise',
+    top: 50,
+    right: 10,
+    pieces: [
+      { gt: 10.0, color: '#ffeb3b', label: '> 10.0' },
+      { gt: 3.9, lte: 10.0, color: '#2196F3', label: '3.9 ~ 10.0' },
+      { gt: 0, lte: 3.9, color: '#ff0000', label: '< 3.9' },
+    ]
+  },
+  series: [{
     data: data,
     type: 'line'
   }]
